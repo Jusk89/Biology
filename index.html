@@ -43,10 +43,29 @@
   </section>
 
   <section class="cards">
-    <div class="info-card">🌿 <h3>Өсімдіктер</h3><p>Өсімдіктер әлемі туралы ақпарат.</p></div>
-    <div class="info-card">🦁 <h3>Жануарлар</h3><p>Жануарлардың тіршілік ерекшеліктері.</p></div>
-    <div class="info-card">🧬 <h3>Генетика</h3><p>Тұқымқуалаушылық заңдары.</p></div>
-    <div class="info-card">🌍 <h3>Экология</h3><p>Ағзалар мен ортаның байланысы.</p></div>
+    <div class="info-card">
+      🌿
+      <h3>Өсімдіктер</h3>
+      <p>Өсімдіктер әлемі туралы ақпарат.</p>
+    </div>
+
+    <div class="info-card">
+      🦁
+      <h3>Жануарлар</h3>
+      <p>Жануарлардың тіршілік ерекшеліктері.</p>
+    </div>
+
+    <div class="info-card">
+      🧬
+      <h3>Генетика</h3>
+      <p>Тұқымқуалаушылық заңдары.</p>
+    </div>
+
+    <div class="info-card">
+      🌍
+      <h3>Экология</h3>
+      <p>Ағзалар мен ортаның байланысы.</p>
+    </div>
   </section>
 
   <section class="topics" id="topics">
@@ -64,47 +83,49 @@
     </div>
 
     <div class="topic-grid" id="topicGrid">
+
       <div class="topic-card plant">
         <img src="https://images.unsplash.com/photo-1463936575829-25148e1db1b8?auto=format&fit=crop&w=600&q=80">
         <h3>Өсімдіктер биологиясы</h3>
         <p>Өсімдіктердің құрылысы, фотосинтезі және көбеюі.</p>
-        <button onclick="openModal('Өсімдіктер биологиясы', 'Өсімдіктер — фотосинтез арқылы қоректенетін тірі ағзалар. Олар оттек бөліп, табиғаттағы тепе-теңдікті сақтайды.')">Толығырақ</button>
+        <button onclick="openTopic('plants')">Толығырақ</button>
       </div>
 
       <div class="topic-card animal">
         <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=600&q=80">
         <h3>Жануарлар биологиясы</h3>
         <p>Жануарлардың түрлері, мүшелері және мінез-құлқы.</p>
-        <button onclick="openModal('Жануарлар биологиясы', 'Жануарлар — дайын органикалық заттармен қоректенетін ағзалар. Олар қозғала алады және жүйке жүйесі жақсы дамыған.')">Толығырақ</button>
+        <button onclick="openTopic('animals')">Толығырақ</button>
       </div>
 
       <div class="topic-card human">
         <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=600&q=80">
         <h3>Адам анатомиясы</h3>
         <p>Адам ағзасының мүшелері мен жүйелері.</p>
-        <button onclick="openModal('Адам анатомиясы', 'Адам анатомиясы дене құрылысын зерттейді: сүйек, бұлшықет, жүрек, ми, өкпе және басқа мүшелер.')">Толығырақ</button>
+        <button onclick="openTopic('human')">Толығырақ</button>
       </div>
 
       <div class="topic-card eco">
         <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=600&q=80">
         <h3>Экология</h3>
         <p>Табиғатты қорғау және қоршаған орта.</p>
-        <button onclick="openModal('Экология', 'Экология ағзалардың бір-бірімен және қоршаған ортамен байланысын зерттейді. Табиғатты қорғау — әр адамның міндеті.')">Толығырақ</button>
+        <button onclick="openTopic('ecology')">Толығырақ</button>
       </div>
 
       <div class="topic-card human">
         <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&w=600&q=80">
         <h3>Генетика</h3>
         <p>ДНҚ, ген және тұқымқуалаушылық туралы ғылым.</p>
-        <button onclick="openModal('Генетика', 'Генетика тұқымқуалаушылық пен өзгергіштікті зерттейді. ДНҚ ағза туралы негізгі ақпаратты сақтайды.')">Толығырақ</button>
+        <button onclick="openTopic('genetics')">Толығырақ</button>
       </div>
 
       <div class="topic-card eco">
         <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=600&q=80">
         <h3>Микробиология</h3>
         <p>Бактериялар, вирустар және микроағзалар.</p>
-        <button onclick="openModal('Микробиология', 'Микробиология көзге көрінбейтін ұсақ ағзаларды зерттейді. Олардың кейбірі пайдалы, кейбірі ауру тудыруы мүмкін.')">Толығырақ</button>
+        <button onclick="openTopic('microbiology')">Толығырақ</button>
       </div>
+
     </div>
   </section>
 
@@ -120,16 +141,16 @@
   </section>
 
   <section class="quiz" id="quiz">
-    <h2>Қысқа тест</h2>
-    <p id="question">Биология нені зерттейді?</p>
+    <h2>Биология бойынша тест</h2>
 
-    <div class="answers">
-      <button onclick="checkAnswer(false)">Тек өсімдіктерді</button>
-      <button onclick="checkAnswer(true)">Тірі ағзаларды</button>
-      <button onclick="checkAnswer(false)">Тек тастарды</button>
-    </div>
+    <p id="question"></p>
+
+    <div class="answers" id="answers"></div>
 
     <h3 id="result"></h3>
+    <p id="score"></p>
+
+    <button onclick="nextQuestion()">Келесі сұрақ</button>
   </section>
 
   <footer>
