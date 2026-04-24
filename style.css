@@ -340,3 +340,6 @@ footer {
     width: 85%;
   }
 }
+#modalText {
+  white-space: pre-line;
+}
