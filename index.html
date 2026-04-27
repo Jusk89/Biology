@@ -1,170 +1,163 @@
 <!DOCTYPE html>
 <html lang="kk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BioScience | Биология әлемі</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <div class="logo">
-      <span>🍃</span>
-      <div>
-        <h2>BioScience</h2>
-        <p>Биология әлемі</p>
-      </div>
-    </div>
-
-    <nav>
-      <a href="#home">Басты бет</a>
-      <a href="#topics">Тақырыптар</a>
-      <a href="#facts">Деректер</a>
-      <a href="#quiz">Тест</a>
-    </nav>
-
-    <input type="text" id="searchInput" placeholder="Іздеу..." />
-  </header>
-
-  <section class="hero" id="home">
-    <div class="hero-text">
-      <h1>Биология — тіршілікті зерттейтін ғылым</h1>
-      <p>
-        Биология тірі ағзалардың құрылысын, қызметін, өсуін,
-        көбеюін және қоршаған ортамен байланысын зерттейді.
-      </p>
-      <button onclick="scrollToTopics()">Көбірек білу</button>
-    </div>
-
-    <div class="hero-img">
-      <img src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?auto=format&fit=crop&w=900&q=80" />
-    </div>
-  </section>
-
-  <section class="cards">
-    <div class="info-card">
-      🌿
-      <h3>Өсімдіктер</h3>
-      <p>Өсімдіктер әлемі туралы ақпарат.</p>
-    </div>
-
-    <div class="info-card">
-      🦁
-      <h3>Жануарлар</h3>
-      <p>Жануарлардың тіршілік ерекшеліктері.</p>
-    </div>
-
-    <div class="info-card">
-      🧬
-      <h3>Генетика</h3>
-      <p>Тұқымқуалаушылық заңдары.</p>
-    </div>
-
-    <div class="info-card">
-      🌍
-      <h3>Экология</h3>
-      <p>Ағзалар мен ортаның байланысы.</p>
-    </div>
-  </section>
-
-  <section class="topics" id="topics">
-    <div class="section-title">
-      <h2>Негізгі тақырыптар</h2>
-      <p>Биологияның маңызды бөлімдерімен танысыңыз</p>
-    </div>
-
-    <div class="filter-buttons">
-      <button onclick="filterTopics('all')">Барлығы</button>
-      <button onclick="filterTopics('animal')">Жануарлар</button>
-      <button onclick="filterTopics('plant')">Өсімдіктер</button>
-      <button onclick="filterTopics('human')">Адам</button>
-      <button onclick="filterTopics('eco')">Экология</button>
-    </div>
-
-    <div class="topic-grid" id="topicGrid">
-
-      <div class="topic-card plant">
-        <img src="https://images.unsplash.com/photo-1463936575829-25148e1db1b8?auto=format&fit=crop&w=600&q=80">
-        <h3>Өсімдіктер биологиясы</h3>
-        <p>Өсімдіктердің құрылысы, фотосинтезі және көбеюі.</p>
-        <button onclick="openTopic('plants')">Толығырақ</button>
-      </div>
-
-      <div class="topic-card animal">
-        <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=600&q=80">
-        <h3>Жануарлар биологиясы</h3>
-        <p>Жануарлардың түрлері, мүшелері және мінез-құлқы.</p>
-        <button onclick="openTopic('animals')">Толығырақ</button>
-      </div>
-
-      <div class="topic-card human">
-        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=600&q=80">
-        <h3>Адам анатомиясы</h3>
-        <p>Адам ағзасының мүшелері мен жүйелері.</p>
-        <button onclick="openTopic('human')">Толығырақ</button>
-      </div>
-
-      <div class="topic-card eco">
-        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=600&q=80">
-        <h3>Экология</h3>
-        <p>Табиғатты қорғау және қоршаған орта.</p>
-        <button onclick="openTopic('ecology')">Толығырақ</button>
-      </div>
-
-      <div class="topic-card human">
-        <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&w=600&q=80">
-        <h3>Генетика</h3>
-        <p>ДНҚ, ген және тұқымқуалаушылық туралы ғылым.</p>
-        <button onclick="openTopic('genetics')">Толығырақ</button>
-      </div>
-
-      <div class="topic-card eco">
-        <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=600&q=80">
-        <h3>Микробиология</h3>
-        <p>Бактериялар, вирустар және микроағзалар.</p>
-        <button onclick="openTopic('microbiology')">Толығырақ</button>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="facts" id="facts">
-    <h2>Қызықты деректер</h2>
-
-    <div class="fact-box">
-      <p>🦋 Жер бетінде миллиондаған жануар түрлері бар.</p>
-      <p>🌳 Бір үлкен ағаш жылына көп мөлшерде оттек бөледі.</p>
-      <p>🧬 Адам ДНҚ-сындағы ақпарат өте үлкен көлемді құрайды.</p>
-      <p>🌊 Мұхиттар Жердегі тіршіліктің маңызды бөлігі.</p>
-    </div>
-  </section>
-
-  <section class="quiz" id="quiz">
-    <h2>Биология бойынша тест</h2>
-
-    <p id="question"></p>
-
-    <div class="answers" id="answers"></div>
-
-    <h3 id="result"></h3>
-    <p id="score"></p>
-
-    <button onclick="nextQuestion()">Келесі сұрақ</button>
-  </section>
-
-  <footer>
-    <p>© 2026 BioScience. Барлық құқықтар қорғалған.</p>
-  </footer>
-
-  <div class="modal" id="modal">
-    <div class="modal-content">
-      <span onclick="closeModal()">&times;</span>
-      <h2 id="modalTitle"></h2>
-      <p id="modalText"></p>
+<header>
+  <div class="logo">
+    <span>🍃</span>
+    <div>
+      <h2>BioScience</h2>
+      <p>Биология әлемі</p>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <nav>
+    <a href="#home">Басты бет</a>
+    <a href="#topics">Тақырыптар</a>
+    <a href="#facts">Деректер</a>
+    <a href="#quiz">Тест</a>
+  </nav>
+
+  <input type="text" id="searchInput" placeholder="Іздеу...">
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-text">
+    <h1>Биология — тіршілікті зерттейтін ғылым</h1>
+    <p>
+      Биология тірі ағзалардың құрылысын, қызметін, өсуін,
+      көбеюін және қоршаған ортамен байланысын зерттейді.
+    </p>
+    <button onclick="scrollToTopics()">Көбірек білу</button>
+  </div>
+
+  <div class="hero-img">
+    <img src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?auto=format&fit=crop&w=900&q=80">
+  </div>
+</section>
+
+<section class="cards">
+  <div class="info-card">
+    🌿
+    <h3>Өсімдіктер</h3>
+    <p>Өсімдіктер әлемі туралы ақпарат.</p>
+  </div>
+
+  <div class="info-card">
+    🦁
+    <h3>Жануарлар</h3>
+    <p>Жануарлардың тіршілік ерекшеліктері.</p>
+  </div>
+
+  <div class="info-card">
+    🧬
+    <h3>Генетика</h3>
+    <p>Тұқымқуалаушылық заңдары.</p>
+  </div>
+
+  <div class="info-card">
+    🌍
+    <h3>Экология</h3>
+    <p>Ағзалар мен ортаның байланысы.</p>
+  </div>
+</section>
+
+<section class="topics" id="topics">
+  <div class="section-title">
+    <h2>Негізгі тақырыптар</h2>
+    <p>Биологияның маңызды бөлімдерімен танысыңыз</p>
+  </div>
+
+  <div class="filter-buttons">
+    <button onclick="filterTopics('all')">Барлығы</button>
+    <button onclick="filterTopics('animal')">Жануарлар</button>
+    <button onclick="filterTopics('plant')">Өсімдіктер</button>
+    <button onclick="filterTopics('human')">Адам</button>
+    <button onclick="filterTopics('eco')">Экология</button>
+  </div>
+
+  <div class="topic-grid">
+
+    <div class="topic-card plant">
+      <img src="https://images.unsplash.com/photo-1463936575829-25148e1db1b8?auto=format&fit=crop&w=600&q=80">
+      <h3>Өсімдіктер биологиясы</h3>
+      <p>Өсімдіктердің құрылысы, фотосинтезі және көбеюі.</p>
+      <a class="topic-btn" href="plants.html">Толығырақ</a>
+    </div>
+
+    <div class="topic-card animal">
+      <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=600&q=80">
+      <h3>Жануарлар биологиясы</h3>
+      <p>Жануарлардың түрлері, мүшелері және мінез-құлқы.</p>
+      <a class="topic-btn" href="animals.html">Толығырақ</a>
+    </div>
+
+    <div class="topic-card human">
+      <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=600&q=80">
+      <h3>Адам анатомиясы</h3>
+      <p>Адам ағзасының мүшелері мен жүйелері.</p>
+      <a class="topic-btn" href="human.html">Толығырақ</a>
+    </div>
+
+    <div class="topic-card eco">
+      <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=600&q=80">
+      <h3>Экология</h3>
+      <p>Табиғатты қорғау және қоршаған орта.</p>
+      <a class="topic-btn" href="ecology.html">Толығырақ</a>
+    </div>
+
+    <div class="topic-card human">
+      <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&w=600&q=80">
+      <h3>Генетика</h3>
+      <p>ДНҚ, ген және тұқымқуалаушылық туралы ғылым.</p>
+      <a class="topic-btn" href="genetics.html">Толығырақ</a>
+    </div>
+
+    <div class="topic-card eco">
+      <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=600&q=80">
+      <h3>Микробиология</h3>
+      <p>Бактериялар, вирустар және микроағзалар.</p>
+      <a class="topic-btn" href="microbiology.html">Толығырақ</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="facts" id="facts">
+  <h2>Қызықты деректер</h2>
+
+  <div class="fact-box">
+    <p>🦋 Жер бетінде миллиондаған жануар түрлері бар.</p>
+    <p>🌳 Бір үлкен ағаш жылына көп мөлшерде оттек бөледі.</p>
+    <p>🧬 Адам ДНҚ-сындағы ақпарат өте үлкен көлемді құрайды.</p>
+    <p>🌊 Мұхиттар Жердегі тіршіліктің маңызды бөлігі.</p>
+  </div>
+</section>
+
+<section class="quiz" id="quiz">
+  <h2>Биология бойынша тест</h2>
+
+  <p id="question"></p>
+
+  <div class="answers" id="answers"></div>
+
+  <h3 id="result"></h3>
+  <p id="score"></p>
+
+  <button onclick="nextQuestion()">Келесі сұрақ</button>
+</section>
+
+<footer>
+  <p>© 2026 BioScience. Барлық құқықтар қорғалған.</p>
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>

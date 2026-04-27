@@ -343,3 +343,17 @@ footer {
 #modalText {
   white-space: pre-line;
 }
+.topic-btn {
+  display: inline-block;
+  margin: 18px;
+  background: #4b7a3b;
+  color: white;
+  text-decoration: none;
+  padding: 13px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.topic-btn:hover {
+  background: #355f29;
+}
